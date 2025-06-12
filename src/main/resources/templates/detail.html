@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<style type="text/css">
+.container {
+	margin-top: 50px;
+}
+.row {
+	margin: 0px auto;
+	width: 800px;
+}
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <table class="table">
+        <tr>
+          <td width="30%" class="text-center" rowspan="8">
+            <img th:src=" 'https://www.menupan.com' + ${vo.poster} " style="width: 240px; height: 200px;">
+          </td>
+          <td colspan="2">
+            <h3>[[${vo.name}]]&nbsp;<span style="color: orange;">[[${vo.score}]]</span></h3>
+          </td>
+        </tr>
+        <tr>
+          <th width="15%" class="text-center">주소</th>
+          <td width="55%" th:text="${vo.address}"></td>
+        </tr>
+        <tr>
+          <th width="15%" class="text-center">전화</th>
+          <td width="55%" th:text="${vo.phone}"></td>
+        </tr>
+        <tr>
+          <th width="15%" class="text-center">음식 종류</th>
+          <td width="55%" th:text="${vo.type}"></td>
+        </tr>
+        <tr>
+          <th width="15%" class="text-center">영업 시간</th>
+          <td width="55%" th:text="${vo.time}"></td>
+        </tr>
+        <tr>
+          <th width="15%" class="text-center">주차</th>
+          <td width="55%" th:text="${vo.parking}"></td>
+        </tr>
+        <tr>
+          <th width="15%" class="text-center">가격대</th>
+          <td width="55%" th:text="${vo.price}"></td>
+        </tr>
+        <tr>
+          <th width="15%" class="text-center">테마</th>
+          <td width="55%" th:text="${vo.theme}"></td>
+        </tr>
+        <tr>
+          <td colspan="3">[[${vo.content}]]</td>
+        </tr>
+      </table>
+      <table class="table">
+        <tr>
+          <td class="text-right">
+            <input type="button" class="btn-sm btn-primary" onclick="javascript:history.back()" value="목록">
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</body>
+</html>
